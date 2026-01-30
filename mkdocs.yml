@@ -1,0 +1,30 @@
+site_name: JTURPCM4 SOP Documentation
+
+theme:
+  name: material
+
+  logo: assets/JTLOGO.png
+  favicon: assets/JTLOGO.png
+
+
+
+  features:
+    - content.code.copy
+    - content.code.select
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+
+
+copyright: |
+  © 2026 — Made by Saikat Dey
