@@ -8,8 +8,22 @@ This document describes the **Standard Operating Procedure (SOP)** to:
 - Update UB_JTEDS code
 - Change SIM and verify 4G
 - Update hostname
+---
+## 🔐 Accessing the Device via SSH
 
-All commands are **copy-paste ready**.
+This section describes the procedure to securely access the CM4 device using **SSH (Secure Shell)** from a personal computer.
+
+This procedure is applicable to **Windows, Linux, and macOS** systems.
+
+---
+
+### 1. SSH Command
+
+To log in to the device, open a **command prompt / terminal** on your PC and execute the following command:
+
+```bash
+ssh UbiqCM4@<DEVICE_IP>
+
 
 ---
 
