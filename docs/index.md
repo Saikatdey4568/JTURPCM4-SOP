@@ -28,7 +28,7 @@ ssh UbiqCM4@<DEVICE_IP>
 ---
 
 ## 1. Upload UB_JTEDS Code
-Upload the folder **UB_JTEDS** written by Saikat.
+Upload the new folder **UB_JTEDS** 
 
 This ensures the device number changes from:
 ```
