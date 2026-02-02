@@ -108,7 +108,7 @@ sudo apt update && sudo apt upgrade -y
 ```
 This might take some time 
 
-### Check for running Remoteit services
+Check for running Remoteit services
 
 ```bash
 ps aux | grep remoteit
