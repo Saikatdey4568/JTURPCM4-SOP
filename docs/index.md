@@ -44,6 +44,11 @@ If prompted:
 - Type yes
 - Enter the device password
 
+
+```bash
+UbiqCM4
+```
+
 You are now logged into the device.
 
 ---
@@ -72,6 +77,8 @@ In case of Windows
 ```bash
 scp -r "C:\Users\Admin\OneDrive\Desktop\UB_JTEDS" UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
 ```
+Refer teh screenshot for more information
+![SCP in Windows](assets/images/scp_windows.jpeg)
 
 
 Wait until the copy process completes.
@@ -84,7 +91,7 @@ Log in to the device and run:
 cd /home/UbiqCM4
 chmod -R 755 UB_JTEDS
 ```
-
+This will have no output
 ---
 
 ## Step 3: Remove Remote.it Software
