@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sop-change-ubiqcm4xxx-to-jturpcm4xxx" class="md-skip">
+        <a href="#sop-change-device-name-from-ubiqcm4xxx-to-jturpcm4xxx" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SOP: Change UBIQCM4XXX to JTURPCM4XXX
+              SOP: Change Device Name from UBIQCM4XXX to JTURPCM4XXX
             
           </span>
         </div>
@@ -206,7 +206,7 @@
   <span class="md-ellipsis">
     
   
-    SOP: Change UBIQCM4XXX to JTURPCM4XXX
+    SOP: Change Device Name from UBIQCM4XXX to JTURPCM4XXX
   
 
     
@@ -224,7 +224,7 @@
   <span class="md-ellipsis">
     
   
-    SOP: Change UBIQCM4XXX to JTURPCM4XXX
+    SOP: Change Device Name from UBIQCM4XXX to JTURPCM4XXX
   
 
     
@@ -250,10 +250,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Purpose
       
     </span>
   </a>
@@ -261,10 +261,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-upload-ub_jteds-code" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Upload UB_JTEDS Code
+        Prerequisites
       
     </span>
   </a>
@@ -272,22 +272,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-disable-remove-remoteit-services" class="md-nav__link">
+  <a href="#step-1-connect-to-the-device-using-ssh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Disable &amp; Remove Remote.it Services
+        Step 1: Connect to the Device Using SSH
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Disable &amp; Remove Remote.it Services">
+    <nav class="md-nav" aria-label="Step 1: Connect to the Device Using SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-system" class="md-nav__link">
+  <a href="#open-terminal-or-command-prompt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Update System
+        Open Terminal or Command Prompt
       
     </span>
   </a>
@@ -295,54 +295,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#identify-services" class="md-nav__link">
+  <a href="#login-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identify Services
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stop Services
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disable-on-boot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Disable on Boot
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remove-completely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove Completely
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify
+        Login Command
       
     </span>
   </a>
@@ -355,22 +311,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-code-update-ub_jteds" class="md-nav__link">
+  <a href="#step-2-upload-new-software-ub_jteds" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Code Update (UB_JTEDS)
+        Step 2: Upload New Software (UB_JTEDS)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Code Update (UB_JTEDS)">
+    <nav class="md-nav" aria-label="Step 2: Upload New Software (UB_JTEDS)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#backup-existing-code" class="md-nav__link">
+  <a href="#backup-existing-software" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Backup Existing Code
+        Backup Existing Software
       
     </span>
   </a>
@@ -378,10 +334,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#copy-new-code-from-pc" class="md-nav__link">
+  <a href="#copy-new-ub_jteds-from-pc-to-device" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy New Code (From PC)
+        Copy New UB_JTEDS from PC to Device
       
     </span>
   </a>
@@ -389,32 +345,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fix-permissions" class="md-nav__link">
+  <a href="#set-correct-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fix Permissions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#restart-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restart Services
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify Logs
+        Set Correct Permissions
       
     </span>
   </a>
@@ -427,44 +361,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-update-access-token" class="md-nav__link">
+  <a href="#step-3-remove-remoteit-software" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Update Access Token
+        Step 3: Remove Remote.it Software
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-sim-4g-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. SIM &amp; 4G Verification
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-change-device-hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Change Device Hostname
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Change Device Hostname">
+    <nav class="md-nav" aria-label="Step 3: Remove Remote.it Software">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#check-current" class="md-nav__link">
+  <a href="#update-device-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check Current
+        Update Device Packages
       
     </span>
   </a>
@@ -472,10 +384,132 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-hostname" class="md-nav__link">
+  <a href="#stop-remoteit-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Update Hostname
+        Stop Remote.it Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-remoteit-services-at-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Remote.it Services at Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-remoteit-completely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Remote.it Completely
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-restart-device-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Restart Device Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Restart Device Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-software-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Software Operation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-update-device-access-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Update Device Access Token
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-verify-sim-card-and-4g-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Verify SIM Card and 4G Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-change-device-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Change Device Hostname
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Change Device Hostname">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-current-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Current Hostname
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-new-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set New Hostname
       
     </span>
   </a>
@@ -494,10 +528,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reboot" class="md-nav__link">
+  <a href="#reboot-the-device" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reboot
+        Reboot the Device
       
     </span>
   </a>
@@ -505,10 +539,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verify_1" class="md-nav__link">
+  <a href="#verify-final-hostname" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verify
+        Verify Final Hostname
       
     </span>
   </a>
@@ -521,10 +555,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-useful-scp-command" class="md-nav__link">
+  <a href="#optional-copy-code-from-device-to-pc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Useful SCP Command
+        Optional: Copy Code from Device to PC
       
     </span>
   </a>
@@ -532,10 +566,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sop-completed-successfully" class="md-nav__link">
+  <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SOP Completed Successfully
+        Completion
       
     </span>
   </a>
@@ -577,10 +611,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Purpose
       
     </span>
   </a>
@@ -588,10 +622,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-upload-ub_jteds-code" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Upload UB_JTEDS Code
+        Prerequisites
       
     </span>
   </a>
@@ -599,22 +633,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-disable-remove-remoteit-services" class="md-nav__link">
+  <a href="#step-1-connect-to-the-device-using-ssh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Disable &amp; Remove Remote.it Services
+        Step 1: Connect to the Device Using SSH
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Disable &amp; Remove Remote.it Services">
+    <nav class="md-nav" aria-label="Step 1: Connect to the Device Using SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-system" class="md-nav__link">
+  <a href="#open-terminal-or-command-prompt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Update System
+        Open Terminal or Command Prompt
       
     </span>
   </a>
@@ -622,54 +656,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#identify-services" class="md-nav__link">
+  <a href="#login-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identify Services
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stop Services
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disable-on-boot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Disable on Boot
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remove-completely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remove Completely
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify
+        Login Command
       
     </span>
   </a>
@@ -682,22 +672,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-code-update-ub_jteds" class="md-nav__link">
+  <a href="#step-2-upload-new-software-ub_jteds" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Code Update (UB_JTEDS)
+        Step 2: Upload New Software (UB_JTEDS)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Code Update (UB_JTEDS)">
+    <nav class="md-nav" aria-label="Step 2: Upload New Software (UB_JTEDS)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#backup-existing-code" class="md-nav__link">
+  <a href="#backup-existing-software" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Backup Existing Code
+        Backup Existing Software
       
     </span>
   </a>
@@ -705,10 +695,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#copy-new-code-from-pc" class="md-nav__link">
+  <a href="#copy-new-ub_jteds-from-pc-to-device" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy New Code (From PC)
+        Copy New UB_JTEDS from PC to Device
       
     </span>
   </a>
@@ -716,32 +706,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fix-permissions" class="md-nav__link">
+  <a href="#set-correct-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fix Permissions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#restart-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restart Services
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify Logs
+        Set Correct Permissions
       
     </span>
   </a>
@@ -754,44 +722,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-update-access-token" class="md-nav__link">
+  <a href="#step-3-remove-remoteit-software" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Update Access Token
+        Step 3: Remove Remote.it Software
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-sim-4g-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. SIM &amp; 4G Verification
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-change-device-hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Change Device Hostname
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Change Device Hostname">
+    <nav class="md-nav" aria-label="Step 3: Remove Remote.it Software">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#check-current" class="md-nav__link">
+  <a href="#update-device-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check Current
+        Update Device Packages
       
     </span>
   </a>
@@ -799,10 +745,132 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-hostname" class="md-nav__link">
+  <a href="#stop-remoteit-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Update Hostname
+        Stop Remote.it Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-remoteit-services-at-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Remote.it Services at Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-remoteit-completely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Remote.it Completely
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-restart-device-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Restart Device Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Restart Device Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-software-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Software Operation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-update-device-access-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Update Device Access Token
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-verify-sim-card-and-4g-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Verify SIM Card and 4G Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-change-device-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Change Device Hostname
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Change Device Hostname">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-current-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Current Hostname
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-new-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set New Hostname
       
     </span>
   </a>
@@ -821,10 +889,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reboot" class="md-nav__link">
+  <a href="#reboot-the-device" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reboot
+        Reboot the Device
       
     </span>
   </a>
@@ -832,10 +900,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verify_1" class="md-nav__link">
+  <a href="#verify-final-hostname" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verify
+        Verify Final Hostname
       
     </span>
   </a>
@@ -848,10 +916,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-useful-scp-command" class="md-nav__link">
+  <a href="#optional-copy-code-from-device-to-pc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Useful SCP Command
+        Optional: Copy Code from Device to PC
       
     </span>
   </a>
@@ -859,10 +927,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sop-completed-successfully" class="md-nav__link">
+  <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SOP Completed Successfully
+        Completion
       
     </span>
   </a>
@@ -886,134 +954,177 @@
 
 
 
-<h1 id="sop-change-ubiqcm4xxx-to-jturpcm4xxx">SOP: Change UBIQCM4XXX to JTURPCM4XXX</h1>
-<h2 id="overview">Overview</h2>
-<p>This document describes the <strong>Standard Operating Procedure (SOP)</strong> to:
-- Change device ID from <code>UBIQCM4XXX</code> to <code>JTURPCM4XXX</code>
-- Disable and remove Remote.it services
-- Update UB_JTEDS code
-- Change SIM and verify 4G
-- Update hostname</p>
-<p>All commands are <strong>copy-paste ready</strong>.</p>
+<h1 id="sop-change-device-name-from-ubiqcm4xxx-to-jturpcm4xxx">SOP: Change Device Name from UBIQCM4XXX to JTURPCM4XXX</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document explains, in simple and clear terms, how to:
+- Change the device name from UBIQCM4XXX to JTURPCM4XXX
+- Remove Remote.it software from the device
+- Update the device software (UB_JTEDS)
+- Verify SIM card and 4G internet connectivity
+- Change the device hostname</p>
+<p>This guide is written so that a person with minimal technical knowledge can follow it step by step.</p>
 <hr />
-<h2 id="1-upload-ub_jteds-code">1. Upload UB_JTEDS Code</h2>
-<p>Upload the folder <strong>UB_JTEDS</strong> written by Saikat.</p>
-<p>This ensures the device number changes from:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>UBIQCM4XXX → JTURPCM4XXX
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting, ensure the following:
+- Laptop or PC (Windows, Linux, or macOS)
+- Internet connection
+- Device powered on
+- Device connected to the internet (hotspot or LAN)
+- Device IP address
+- UB_JTEDS folder available on the PC</p>
+<hr />
+<h2 id="step-1-connect-to-the-device-using-ssh">Step 1: Connect to the Device Using SSH</h2>
+<p>SSH allows you to log in to the device remotely using a command line.</p>
+<h3 id="open-terminal-or-command-prompt">Open Terminal or Command Prompt</h3>
+<ul>
+<li>Windows: Command Prompt or PowerShell</li>
+<li>Linux / macOS: Terminal</li>
+</ul>
+<h3 id="login-command">Login Command</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;
+</code></pre></div>
+<p>Example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh<span class="w"> </span>UbiqCM4@192.168.1.25
+</code></pre></div></p>
+<p>If prompted:
+- Type yes
+- Enter the device password</p>
+<p>You are now logged into the device.</p>
+<hr />
+<h2 id="step-2-upload-new-software-ub_jteds">Step 2: Upload New Software (UB_JTEDS)</h2>
+<h3 id="backup-existing-software">Backup Existing Software</h3>
+<p>Run the following command on the device:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mv<span class="w"> </span>UB_JTEDS<span class="w"> </span>UB_JTEDS_backup
+</code></pre></div>
+This keeps a backup of the existing software.</p>
+<hr />
+<h3 id="copy-new-ub_jteds-from-pc-to-device">Copy New UB_JTEDS from PC to Device</h3>
+<p>On the PC terminal:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>~/Desktop
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>scp<span class="w"> </span>-r<span class="w"> </span>UB_JTEDS<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/
+</code></pre></div></p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UB_JTEDS<span class="w"> </span>UbiqCM4@192.168.1.25:/home/UbiqCM4/
+</code></pre></div></p>
+<p>Wait until the copy process completes.</p>
+<hr />
+<h3 id="set-correct-permissions">Set Correct Permissions</h3>
+<p>Log in to the device and run:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>/home/UbiqCM4
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>UB_JTEDS
 </code></pre></div></p>
 <hr />
-<h2 id="2-disable-remove-remoteit-services">2. Disable &amp; Remove Remote.it Services</h2>
-<h3 id="update-system">Update System</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt update &amp;&amp; sudo apt upgrade -y
+<h2 id="step-3-remove-remoteit-software">Step 3: Remove Remote.it Software</h2>
+<h3 id="update-device-packages">Update Device Packages</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
 </code></pre></div>
-<h3 id="identify-services">Identify Services</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ps aux | grep remoteit
-</code></pre></div>
-<p>Common services:
-- demuxer<br />
-- schannel</p>
-<h3 id="stop-services">Stop Services</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo systemctl stop remoteit
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo systemctl stop demuxer
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>sudo systemctl stop schannel
-</code></pre></div>
-<h3 id="disable-on-boot">Disable on Boot</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo systemctl disable remoteit
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo systemctl disable demuxer
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo systemctl disable schannel
-</code></pre></div>
-<h3 id="remove-completely">Remove Completely</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo apt purge remoteit -y
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo rm -rf /usr/share/remoteit
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>sudo rm -rf /etc/remoteit
-</code></pre></div>
-<h3 id="verify">Verify</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ps aux | grep remoteit
-</code></pre></div>
-No output = success.</p>
 <hr />
-<h2 id="3-code-update-ub_jteds">3. Code Update (UB_JTEDS)</h2>
-<h3 id="backup-existing-code">Backup Existing Code</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh UbiqCM4@&lt;DEVICE_IP&gt;
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>mv UB_JTEDS UB_JTEDS_old_$(date +%F_%H-%M)
+<h3 id="stop-remoteit-services">Stop Remote.it Services</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>remoteit
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>demuxer
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>schannel
 </code></pre></div>
-<blockquote>
-<p>To find IP: Mobile Hotspot → Manage Devices</p>
-</blockquote>
-<h3 id="copy-new-code-from-pc">Copy New Code (From PC)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cd ~/Desktop
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>scp -r UB_JTEDS UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/
+<hr />
+<h3 id="disable-remoteit-services-at-boot">Disable Remote.it Services at Boot</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>remoteit
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>demuxer
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>schannel
 </code></pre></div>
-<h3 id="fix-permissions">Fix Permissions</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ssh UbiqCM4@&lt;DEVICE_IP&gt;
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>cd /home/UbiqCM4
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>chmod -R 755 UB_JTEDS
+<hr />
+<h3 id="remove-remoteit-completely">Remove Remote.it Completely</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>remoteit<span class="w"> </span>-y
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/share/remoteit
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/etc/remoteit
 </code></pre></div>
-<h3 id="restart-services">Restart Services</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo systemctl daemon-reload
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo systemctl restart main
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>sudo systemctl restart system_control
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>sudo systemctl restart logged_data_sync
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>sudo systemctl restart handle_4G
+<hr />
+<h3 id="verify-removal">Verify Removal</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>remoteit
 </code></pre></div>
-<h3 id="verify-logs">Verify Logs</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>journalctl -u main -f
+If no output appears, Remote.it has been successfully removed.</p>
+<hr />
+<h2 id="step-4-restart-device-services">Step 4: Restart Device Services</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>main
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>system_control
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>logged_data_sync
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>handle_4G
 </code></pre></div>
-Expected:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Connected to MQTT broker
+<hr />
+<h3 id="verify-software-operation">Verify Software Operation</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>main<span class="w"> </span>-f
+</code></pre></div>
+<p>Expected output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Connected to MQTT broker
 </code></pre></div></p>
 <hr />
-<h2 id="4-update-access-token">4. Update Access Token</h2>
-<p>Update <code>access_token</code> inside code:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>JTURPCM4@XXX
-</code></pre></div>
-Example:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>UbiqCM4@268 → JTURPCM4268
+<h2 id="step-5-update-device-access-token">Step 5: Update Device Access Token</h2>
+<p>Old format:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>UBIQCM4XXX
+</code></pre></div></p>
+<p>New format:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>JTURPCM4XXX
+</code></pre></div></p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>UbiqCM4@268 → JTURPCM4268
 </code></pre></div></p>
 <hr />
-<h2 id="5-sim-4g-verification">5. SIM &amp; 4G Verification</h2>
-<p>Run:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>python3 handle_4G.py
-</code></pre></div></p>
-<p>Expected Output:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>VI APN configured
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Internet connected
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>4G modem &amp; usb0 detected
+<h2 id="step-6-verify-sim-card-and-4g-connectivity">Step 6: Verify SIM Card and 4G Connectivity</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>python3<span class="w"> </span>handle_4G.py
+</code></pre></div>
+<p>Expected output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>VI APN configured
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Internet connected
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>4G modem &amp; usb0 detected
 </code></pre></div></p>
 <hr />
-<h2 id="6-change-device-hostname">6. Change Device Hostname</h2>
-<h3 id="check-current">Check Current</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>hostnamectl
+<h2 id="step-7-change-device-hostname">Step 7: Change Device Hostname</h2>
+<h3 id="check-current-hostname">Check Current Hostname</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>hostnamectl
 </code></pre></div>
-<h3 id="update-hostname">Update Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo hostnamectl set-hostname JTURPCM4XXX
+<hr />
+<h3 id="set-new-hostname">Set New Hostname</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4XXX
 </code></pre></div>
+<p>Example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4268
+</code></pre></div></p>
+<hr />
 <h3 id="update-hosts-file">Update Hosts File</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo nano /etc/hosts
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
 </code></pre></div>
 <p>Change:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>127.0.1.1    CM4268
-</code></pre></div>
-To:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>127.0.1.1    JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>127.0.1.1    CM4268
 </code></pre></div></p>
-<p>Save:
-- CTRL + O → Enter<br />
+<p>To:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>127.0.1.1    JTURPCM4268
+</code></pre></div></p>
+<p>Save and exit:
+- CTRL + O, then Enter
 - CTRL + X</p>
-<h3 id="reboot">Reboot</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo reboot
-</code></pre></div>
-<p>Wait 2 minutes → Power cycle device.</p>
-<h3 id="verify_1">Verify</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>hostnamectl
-</code></pre></div>
 <hr />
-<h2 id="7-useful-scp-command">7. Useful SCP Command</h2>
-<p>Download code from device to PC:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>scp -r UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS ~/Desktop/
+<h3 id="reboot-the-device">Reboot the Device</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>reboot
+</code></pre></div>
+<p>Wait approximately two minutes, then power the device off and on again.</p>
+<hr />
+<h3 id="verify-final-hostname">Verify Final Hostname</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>hostnamectl
+</code></pre></div>
+<p>The hostname should now display:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>JTURPCM4XXX
 </code></pre></div></p>
 <hr />
-<h2 id="sop-completed-successfully">SOP Completed Successfully</h2>
+<h2 id="optional-copy-code-from-device-to-pc">Optional: Copy Code from Device to PC</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
+</code></pre></div>
+<hr />
+<h2 id="completion">Completion</h2>
+<p>The device is now:
+- Renamed to JTURPCM4XXX
+- Free of Remote.it software
+- Running updated UB_JTEDS software
+- Verified for SIM and 4G connectivity
+- Ready for deployment</p>
 
 
 

@@ -61,15 +61,18 @@ This keeps a backup of the existing software.
 
 ### Copy New UB_JTEDS from PC to Device
 On the PC terminal:
+
+In case of Linux
 ```bash
 cd ~/Desktop
 scp -r UB_JTEDS UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
 ```
 
-Example:
+In case of Windows
 ```bash
-scp -r UB_JTEDS UbiqCM4@192.168.1.25:/home/UbiqCM4/
+scp -r "C:\Users\Admin\OneDrive\Desktop\UB_JTEDS" UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
 ```
+
 
 Wait until the copy process completes.
 
