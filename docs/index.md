@@ -74,6 +74,11 @@ scp -r UB_JTEDS UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
 ```
 
 In case of Windows
+
+```bash
+scp -r "Add UB_JTEDS file location followed by file name " UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
+```
+Example : 
 ```bash
 scp -r "C:\Users\Admin\OneDrive\Desktop\UB_JTEDS" UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
 ```

@@ -1009,7 +1009,7 @@ This keeps a backup of the existing software.</p>
 <p>In case of Windows
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>scp<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;C:\Users\Admin\OneDrive\Desktop\UB_JTEDS&quot;</span><span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/
 </code></pre></div>
-Refer teh screenshot for more information
+Refer the screenshot for more information
 <img alt="SCP in Windows" src="assets/images/scp_windows.jpeg" /></p>
 <p>Wait until the copy process completes.</p>
 <hr />
@@ -1064,64 +1064,67 @@ If no output appears, Remote.it has been successfully removed.</p>
 </code></pre></div></p>
 <hr />
 <h2 id="step-5-update-device-access-token">Step 5: Update Device Access Token</h2>
+<p>Navigate inside UB_JTEDS :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">cd</span><span class="w"> </span>UB_JTEDS
+</code></pre></div>
+Open the access_token.json file :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>access_token.json
+</code></pre></div>
 <p>Old format:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>UBIQCM4XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>UbiqCM4@XXX
 </code></pre></div></p>
 <p>New format:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>JTURPCM4XXX
-</code></pre></div></p>
-<p>Example:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>UbiqCM4@268 → JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>JturpCM4@XXX
 </code></pre></div></p>
 <hr />
 <h2 id="step-6-verify-sim-card-and-4g-connectivity">Step 6: Verify SIM Card and 4G Connectivity</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>python3<span class="w"> </span>handle_4G.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>python3<span class="w"> </span>handle_4G.py
 </code></pre></div>
 <p>Expected output:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>VI APN configured
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Internet connected
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>4G modem &amp; usb0 detected
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>VI APN configured
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Internet connected
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>4G modem &amp; usb0 detected
 </code></pre></div></p>
 <hr />
 <h2 id="step-7-change-device-hostname">Step 7: Change Device Hostname</h2>
 <h3 id="check-current-hostname">Check Current Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>hostnamectl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>hostnamectl
 </code></pre></div>
 <hr />
 <h3 id="set-new-hostname">Set New Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4XXX
 </code></pre></div>
 <p>Example:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4268
 </code></pre></div></p>
 <hr />
 <h3 id="update-hosts-file">Update Hosts File</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
 </code></pre></div>
 <p>Change:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>127.0.1.1    CM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>127.0.1.1    CM4268
 </code></pre></div></p>
 <p>To:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>127.0.1.1    JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>127.0.1.1    JTURPCM4268
 </code></pre></div></p>
 <p>Save and exit:
 - CTRL + O, then Enter
 - CTRL + X</p>
 <hr />
 <h3 id="reboot-the-device">Reboot the Device</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>reboot
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>sudo<span class="w"> </span>reboot
 </code></pre></div>
 <p>Wait approximately two minutes, then power the device off and on again.</p>
 <hr />
 <h3 id="verify-final-hostname">Verify Final Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>hostnamectl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>hostnamectl
 </code></pre></div>
 <p>The hostname should now display:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>JTURPCM4XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>JTURPCM4XXX
 </code></pre></div></p>
 <hr />
 <h2 id="optional-copy-code-from-device-to-pc">Optional: Copy Code from Device to PC</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
 </code></pre></div>
 <hr />
 <h2 id="completion">Completion</h2>
