@@ -102,10 +102,17 @@ This will have no output
 ## Step 3: Remove Remote.it Software
 
 ### Update Device Packages
+
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+This might take some time 
 
+### Check for running Remoteit services
+
+```bash
+ps aux | grep remoteit
+```
 ---
 
 ### Stop Remote.it Services
@@ -139,7 +146,10 @@ sudo rm -rf /etc/remoteit
 ```bash
 ps aux | grep remoteit
 ```
-If no output appears, Remote.it has been successfully removed.
+If no output appears or the output is something like the screenshot below , Remoteit has been successfully removed.
+
+
+![SCP in Windows](assets/images/Remoteit.jpeg)
 
 ---
 
@@ -151,7 +161,7 @@ sudo systemctl restart system_control
 sudo systemctl restart logged_data_sync
 sudo systemctl restart handle_4G
 ```
-
+This will have no output.
 ---
 
 ### Verify Software Operation
@@ -161,7 +171,7 @@ journalctl -u main -f
 
 Expected output:
 ```text
-Connected to MQTT broker
+Connected to MQTT broker and No sensor output.
 ```
 
 ---
@@ -225,7 +235,10 @@ Example:
 ```bash
 sudo hostnamectl set-hostname JTURPCM4268
 ```
-
+### Reverify Hostname
+```bash
+hostnamectl
+```
 ---
 
 ### Update Hosts File
@@ -250,6 +263,7 @@ Save and exit:
 ---
 
 ### Reboot the Device
+This will restart the system from software and hardware both
 ```bash
 sudo reboot
 ```
@@ -284,3 +298,4 @@ The device is now:
 - Running updated UB_JTEDS software
 - Verified for SIM and 4G connectivity
 - Ready for deployment
+- Please contact the developer to add the device in JT portal.
