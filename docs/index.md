@@ -77,7 +77,7 @@ In case of Windows
 ```bash
 scp -r "C:\Users\Admin\OneDrive\Desktop\UB_JTEDS" UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/
 ```
-Refer teh screenshot for more information
+Refer the screenshot for more information
 ![SCP in Windows](assets/images/scp_windows.jpeg)
 
 
@@ -163,20 +163,28 @@ Connected to MQTT broker
 
 ## Step 5: Update Device Access Token
 
+
+Navigate inside UB_JTEDS :
+
+```bash
+cd UB_JTEDS
+```
+Open the access_token.json file :
+
+```bash
+sudo nano access_token.json
+```
+
 Old format:
 ```
-UBIQCM4XXX
+UbiqCM4@XXX
 ```
 
 New format:
 ```
-JTURPCM4XXX
+JturpCM4@XXX
 ```
 
-Example:
-```
-UbiqCM4@268 → JTURPCM4268
-```
 
 ---
 
