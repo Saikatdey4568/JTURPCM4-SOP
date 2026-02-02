@@ -384,6 +384,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#check-for-running-remoteit-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check for running Remoteit services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps-aux-grep-remoteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ps aux | grep remoteit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ps aux | grep remoteit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#stop-remoteit-services" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -515,6 +543,34 @@
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#reverify-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reverify Hostname
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hostnamectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hostnamectl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hostnamectl">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#update-hosts-file" class="md-nav__link">
@@ -745,6 +801,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#check-for-running-remoteit-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check for running Remoteit services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps-aux-grep-remoteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ps aux | grep remoteit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ps aux | grep remoteit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#stop-remoteit-services" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -876,6 +960,34 @@
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#reverify-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reverify Hostname
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hostnamectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hostnamectl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hostnamectl">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#update-hosts-file" class="md-nav__link">
@@ -1025,109 +1137,117 @@ This will have no output</p>
 <hr />
 <h2 id="step-3-remove-remoteit-software">Step 3: Remove Remote.it Software</h2>
 <h3 id="update-device-packages">Update Device Packages</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
 </code></pre></div>
-<hr />
+This might take some time </p>
+<h3 id="check-for-running-remoteit-services">Check for running Remoteit services</h3>
+<h2 id="ps-aux-grep-remoteit"><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>remoteit
+</code></pre></div></h2>
 <h3 id="stop-remoteit-services">Stop Remote.it Services</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>remoteit
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>demuxer
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>schannel
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>remoteit
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>demuxer
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>schannel
 </code></pre></div>
 <hr />
 <h3 id="disable-remoteit-services-at-boot">Disable Remote.it Services at Boot</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>remoteit
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>demuxer
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>schannel
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>remoteit
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>demuxer
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>schannel
 </code></pre></div>
 <hr />
 <h3 id="remove-remoteit-completely">Remove Remote.it Completely</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>remoteit<span class="w"> </span>-y
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/share/remoteit
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/etc/remoteit
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>remoteit<span class="w"> </span>-y
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/share/remoteit
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/etc/remoteit
 </code></pre></div>
 <hr />
 <h3 id="verify-removal">Verify Removal</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>remoteit
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>remoteit
 </code></pre></div>
-If no output appears, Remote.it has been successfully removed.</p>
+If no output appears or the output is something like the screenshot below , Remoteit has been successfully removed.</p>
+<p><img alt="SCP in Windows" src="assets/images/Remoteit.jpeg" /></p>
 <hr />
 <h2 id="step-4-restart-device-services">Step 4: Restart Device Services</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>main
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>system_control
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>logged_data_sync
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>handle_4G
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>main
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>system_control
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>logged_data_sync
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>handle_4G
 </code></pre></div>
+This will have no output.</p>
 <hr />
 <h3 id="verify-software-operation">Verify Software Operation</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>main<span class="w"> </span>-f
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>main<span class="w"> </span>-f
 </code></pre></div>
 <p>Expected output:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Connected to MQTT broker
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Connected to MQTT broker and No sensor output.
 </code></pre></div></p>
 <hr />
 <h2 id="step-5-update-device-access-token">Step 5: Update Device Access Token</h2>
 <p>Navigate inside UB_JTEDS :</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">cd</span><span class="w"> </span>UB_JTEDS
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">cd</span><span class="w"> </span>UB_JTEDS
 </code></pre></div>
 Open the access_token.json file :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>access_token.json
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>access_token.json
 </code></pre></div>
 <p>Old format:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>UbiqCM4@XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>UbiqCM4@XXX
 </code></pre></div></p>
 <p>New format:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>JturpCM4@XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>JturpCM4@XXX
 </code></pre></div></p>
 <hr />
 <h2 id="step-6-verify-sim-card-and-4g-connectivity">Step 6: Verify SIM Card and 4G Connectivity</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>python3<span class="w"> </span>handle_4G.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>python3<span class="w"> </span>handle_4G.py
 </code></pre></div>
 <p>Expected output:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>VI APN configured
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Internet connected
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>4G modem &amp; usb0 detected
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>VI APN configured
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Internet connected
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>4G modem &amp; usb0 detected
 </code></pre></div></p>
 <hr />
 <h2 id="step-7-change-device-hostname">Step 7: Change Device Hostname</h2>
 <h3 id="check-current-hostname">Check Current Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>hostnamectl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>hostnamectl
 </code></pre></div>
 <hr />
 <h3 id="set-new-hostname">Set New Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4XXX
 </code></pre></div>
 <p>Example:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>JTURPCM4268
 </code></pre></div></p>
-<hr />
+<h3 id="reverify-hostname">Reverify Hostname</h3>
+<h2 id="hostnamectl"><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>hostnamectl
+</code></pre></div></h2>
 <h3 id="update-hosts-file">Update Hosts File</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
 </code></pre></div>
 <p>Change:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>127.0.1.1    CM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>127.0.1.1    CM4268
 </code></pre></div></p>
 <p>To:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>127.0.1.1    JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>127.0.1.1    JTURPCM4268
 </code></pre></div></p>
 <p>Save and exit:
 - CTRL + O, then Enter
 - CTRL + X</p>
 <hr />
 <h3 id="reboot-the-device">Reboot the Device</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>sudo<span class="w"> </span>reboot
-</code></pre></div>
+<p>This will restart the system from software and hardware both
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>sudo<span class="w"> </span>reboot
+</code></pre></div></p>
 <p>Wait approximately two minutes, then power the device off and on again.</p>
 <hr />
 <h3 id="verify-final-hostname">Verify Final Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>hostnamectl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>hostnamectl
 </code></pre></div>
 <p>The hostname should now display:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>JTURPCM4XXX
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>JTURPCM4XXX
 </code></pre></div></p>
 <hr />
 <h2 id="optional-copy-code-from-device-to-pc">Optional: Copy Code from Device to PC</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
 </code></pre></div>
 <hr />
 <h2 id="completion">Completion</h2>
@@ -1136,7 +1256,8 @@ Open the access_token.json file :</p>
 - Free of Remote.it software
 - Running updated UB_JTEDS software
 - Verified for SIM and 4G connectivity
-- Ready for deployment</p>
+- Ready for deployment
+- Please contact the developer to add the device in JT portal.</p>
 
 
 
