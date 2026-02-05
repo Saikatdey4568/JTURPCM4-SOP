@@ -3,7 +3,7 @@
 ## Purpose
 This document explains, in simple and clear terms, how to:
 - Change the device name from UBIQCM4XXX to JTURPCM4XXX
-- Remove Remote.it software from the device
+- Remove Remoteit software from the device
 - Update the device software (UB_JTEDS)
 - Verify SIM card and 4G internet connectivity
 - Change the device hostname
@@ -98,6 +98,65 @@ chmod -R 755 UB_JTEDS
 ```
 This will have no output
 ---
+
+## Step 4 : Correct your main.service(Most Important to get the data in JT Portal)
+
+### Edit the service file
+
+```bash
+sudo systemctl edit --full main
+
+```
+
+
+### Replace the [Service] section with THIS
+
+```bash
+[Unit]
+Description=Main Python Script Service
+After=network.target pigpiod.service
+Requires=pigpiod.service
+
+[Service]
+Type=simple
+User=UbiqCM4
+
+WorkingDirectory=/home/UbiqCM4/UB_JTEDS
+ExecStart=/usr/bin/python3 /home/UbiqCM4/UB_JTEDS/main.py
+
+Restart=on-failure
+RestartSec=5
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+
+```
+
+### Apply changes (DON’T SKIP)
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart main
+
+
+```
+
+### Check
+
+```bash
+systemctl status main
+journalctl -u main -f
+
+
+
+```
+
+
+
 
 ## Step 3: Remove Remote.it Software
 
@@ -199,7 +258,7 @@ New format:
 ```
 JturpCM4@XXX
 ```
-
+Note: Please write the access token on the box with marker.
 
 ---
 
@@ -215,6 +274,16 @@ Internet connected
 4G modem & usb0 detected
 ```
 
+
+### If that doesn't work then follow this
+```bash
+python3 fetch_sim_info.py
+```
+
+Expected output:
+```text
+SIM info
+```
 ---
 
 ## Step 7: Change Device Hostname
@@ -235,6 +304,12 @@ Example:
 ```bash
 sudo hostnamectl set-hostname JTURPCM4268
 ```
+
+### Reboot the CM4
+```bash
+sudo reboot
+```
+
 ### Reverify Hostname
 ```bash
 hostnamectl
