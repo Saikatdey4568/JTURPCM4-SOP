@@ -99,7 +99,7 @@ chmod -R 755 UB_JTEDS
 This will have no output
 ---
 
-## Step 4 : Correct your main.service(Most Important to get the data in JT Portal)
+## Step 3 : Correct your main.service(Most Important to get the data in JT Portal)
 
 ### Edit the service file
 
@@ -158,7 +158,7 @@ journalctl -u main -f
 
 
 
-## Step 3: Remove Remote.it Software
+## Step 4: Remove Remote.it Software
 
 ### Update Device Packages
 
@@ -212,7 +212,7 @@ If no output appears or the output is something like the screenshot below , Remo
 
 ---
 
-## Step 4: Restart Device Services
+## Step 5: Restart Device Services
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart main
@@ -235,7 +235,7 @@ Connected to MQTT broker and No sensor output.
 
 ---
 
-## Step 5: Update Device Access Token
+## Step 6: Update Device Access Token
 
 
 Navigate inside UB_JTEDS :
@@ -262,7 +262,7 @@ Note: Please write the access token on the box with marker.
 
 ---
 
-## Step 6: Verify SIM Card and 4G Connectivity
+## Step 7: Verify SIM Card and 4G Connectivity
 ```bash
 python3 handle_4G.py
 ```
@@ -286,7 +286,7 @@ SIM info
 ```
 ---
 
-## Step 7: Change Device Hostname
+## Step 8: Change Device Hostname
 
 ### Check Current Hostname
 ```bash
