@@ -328,7 +328,7 @@ Change:
 
 To:
 ```text
-127.0.1.1    JTURPCM4268
+127.0.1.1    JTURPCM4XXX
 ```
 
 Save and exit:
@@ -347,17 +347,113 @@ Wait approximately two minutes, then power the device off and on again.
 
 ---
 
-### Verify Final Hostname
+
+## 9. Install Tailscale (Remote Access)
+
+Download the Statis Binary file named : arm64: tailscale_1.94.2_arm64.tgz (This should be on download)
+
+
+
+Copy file to device:
+
 ```bash
-hostnamectl
+scp tailscale_1.94.2_arm64.tgz UbiqCM4@<DEVICE_IP>:~
 ```
 
-The hostname should now display:
-```text
-JTURPCM4XXX
+
+Extract the tgz file and navigate to that folder :
+
+```bash
+tar -xvzf tailscale_1.94.2_arm64.tgz
+cd tailscale_1.94.2_arm64
+```
+
+Install:
+
+```bash
+
+sudo cp tailscale /usr/local/bin/
+sudo cp tailscaled /usr/local/sbin/
+sudo chmod 755 /usr/local/bin/tailscale
+sudo chmod 755 /usr/local/sbin/tailscaled
+sudo cp tailscaled /usr/local/sbin/
+sudo chmod 755 /usr/local/sbin/tailscaled
+sudo chmod 755 /usr/local/bin/tailscale
+```
+Check the version to tailscale this will ensure that tailscale is installed properly:
+
+```bash
+tailscale version
+```
+Create service:
+
+```bash
+sudo nano /etc/systemd/system/tailscaled.service
+```
+
+Paste:
+
+```ini
+[Unit]
+Description=Tailscale node agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/tailscaled
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Start:
+
+```bash
+sudo mkdir -p /var/lib/tailscale
+sudo systemctl daemon-reload
+sudo systemctl enable tailscaled
+sudo systemctl daemon-reload
+sudo systemctl reset-failed
+sudo systemctl restart tailscaled
+
+```
+
+
+Check the status of Tailscaled:
+
+```bash
+systemctl status tailscaled
+```
+
+It should show Runnning.
+
+
+Start the tainet channel:
+```bash
+sudo tailscale up
+
+```
+Approve device in browser.
+
+Get remote IP:
+
+```bash
+tailscale ip -4
+```
+
+Remote SSH from anywhere:
+
+```bash
+ssh UbiqCM4@100.x.x.x
 ```
 
 ---
+
+
+
+
 
 ## Optional: Copy Code from Device to PC
 ```bash
@@ -366,11 +462,16 @@ scp -r UbiqCM4@<DEVICE_IP>:/home/UbiqCM4/UB_JTEDS ~/Desktop/
 
 ---
 
-## Completion
-The device is now:
-- Renamed to JTURPCM4XXX
-- Free of Remote.it software
-- Running updated UB_JTEDS software
-- Verified for SIM and 4G connectivity
-- Ready for deployment
-- Please contact the developer to add the device in JT portal.
+## Final Technician Checklist (MANDATORY)
+
+- Write the device **Access Token on device body using permanent marker**
+- Label the SIM card as **JT**
+- Note the **Tailscale IP in deployment sheet**
+- Verify remote SSH login works
+- Confirm data visible in JT portal
+
+---
+
+## Deployment Complete
+Device is now ready for field installation and remote maintenance.
+
