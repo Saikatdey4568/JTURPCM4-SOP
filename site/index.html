@@ -672,19 +672,19 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#verify-final-hostname" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-install-tailscale-remote-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verify Final Hostname
+        9. Install Tailscale (Remote Access)
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -700,10 +700,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#completion" class="md-nav__link">
+  <a href="#final-technician-checklist-mandatory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Completion
+        Final Technician Checklist (MANDATORY)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Complete
       
     </span>
   </a>
@@ -1167,19 +1178,19 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#verify-final-hostname" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-install-tailscale-remote-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verify Final Hostname
+        9. Install Tailscale (Remote Access)
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1195,10 +1206,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#completion" class="md-nav__link">
+  <a href="#final-technician-checklist-mandatory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Completion
+        Final Technician Checklist (MANDATORY)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Complete
       
     </span>
   </a>
@@ -1427,7 +1449,7 @@ Note: Please write the access token on the box with marker.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>127.0.1.1    CM4268
 </code></pre></div></p>
 <p>To:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>127.0.1.1    JTURPCM4268
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>127.0.1.1    JTURPCM4XXX
 </code></pre></div></p>
 <p>Save and exit:
 - CTRL + O, then Enter
@@ -1439,25 +1461,82 @@ Note: Please write the access token on the box with marker.</p>
 </code></pre></div></p>
 <p>Wait approximately two minutes, then power the device off and on again.</p>
 <hr />
-<h3 id="verify-final-hostname">Verify Final Hostname</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>hostnamectl
+<h2 id="9-install-tailscale-remote-access">9. Install Tailscale (Remote Access)</h2>
+<p>Download the Statis Binary file named : arm64: tailscale_1.94.2_arm64.tgz (This should be on download)</p>
+<p>Copy file to device:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>scp<span class="w"> </span>tailscale_1.94.2_arm64.tgz<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:~
 </code></pre></div>
-<p>The hostname should now display:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>JTURPCM4XXX
-</code></pre></div></p>
+<p>Extract the tgz file and navigate to that folder :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>tar<span class="w"> </span>-xvzf<span class="w"> </span>tailscale_1.94.2_arm64.tgz
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nb">cd</span><span class="w"> </span>tailscale_1.94.2_arm64
+</code></pre></div>
+<p>Install:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>tailscale<span class="w"> </span>/usr/local/bin/
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>sudo<span class="w"> </span>cp<span class="w"> </span>tailscaled<span class="w"> </span>/usr/local/sbin/
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/bin/tailscale
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/sbin/tailscaled
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>sudo<span class="w"> </span>cp<span class="w"> </span>tailscaled<span class="w"> </span>/usr/local/sbin/
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/sbin/tailscaled
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/bin/tailscale
+</code></pre></div>
+Check the version to tailscale this will ensure that tailscale is installed properly:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>tailscale<span class="w"> </span>version
+</code></pre></div>
+Create service:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/tailscaled.service
+</code></pre></div>
+<p>Paste:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">[Unit]</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Tailscale node agent</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="k">[Service]</span>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/sbin/tailscaled</span>
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a><span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a><span class="na">RestartSec</span><span class="o">=</span><span class="s">5</span>
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a><span class="k">[Install]</span>
+<a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+<p>Start:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/lib/tailscale
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>tailscaled
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reset-failed
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>tailscaled
+</code></pre></div>
+<p>Check the status of Tailscaled:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>systemctl<span class="w"> </span>status<span class="w"> </span>tailscaled
+</code></pre></div>
+<p>It should show Runnning.</p>
+<p>Start the tainet channel:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>sudo<span class="w"> </span>tailscale<span class="w"> </span>up
+</code></pre></div>
+Approve device in browser.</p>
+<p>Get remote IP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>tailscale<span class="w"> </span>ip<span class="w"> </span>-4
+</code></pre></div>
+<p>Remote SSH from anywhere:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>ssh<span class="w"> </span>UbiqCM4@100.x.x.x
+</code></pre></div>
 <hr />
 <h2 id="optional-copy-code-from-device-to-pc">Optional: Copy Code from Device to PC</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>scp<span class="w"> </span>-r<span class="w"> </span>UbiqCM4@&lt;DEVICE_IP&gt;:/home/UbiqCM4/UB_JTEDS<span class="w"> </span>~/Desktop/
 </code></pre></div>
 <hr />
-<h2 id="completion">Completion</h2>
-<p>The device is now:
-- Renamed to JTURPCM4XXX
-- Free of Remote.it software
-- Running updated UB_JTEDS software
-- Verified for SIM and 4G connectivity
-- Ready for deployment
-- Please contact the developer to add the device in JT portal.</p>
+<h2 id="final-technician-checklist-mandatory">Final Technician Checklist (MANDATORY)</h2>
+<ul>
+<li>Write the device <strong>Access Token on device body using permanent marker</strong></li>
+<li>Label the SIM card as <strong>JT</strong></li>
+<li>Note the <strong>Tailscale IP in deployment sheet</strong></li>
+<li>Verify remote SSH login works</li>
+<li>Confirm data visible in JT portal</li>
+</ul>
+<hr />
+<h2 id="deployment-complete">Deployment Complete</h2>
+<p>Device is now ready for field installation and remote maintenance.</p>
 
 
 

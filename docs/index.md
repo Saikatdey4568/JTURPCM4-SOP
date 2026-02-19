@@ -167,12 +167,12 @@ sudo apt update && sudo apt upgrade -y
 ```
 This might take some time 
 
-Check for running Remoteit services
+Check for running Remoteit services:
 
 ```bash
 ps aux | grep remoteit
 ```
----
+
 
 ### Stop Remote.it Services
 ```bash
@@ -181,7 +181,7 @@ sudo systemctl stop demuxer
 sudo systemctl stop schannel
 ```
 
----
+
 
 ### Disable Remote.it Services at Boot
 ```bash
@@ -190,7 +190,7 @@ sudo systemctl disable demuxer
 sudo systemctl disable schannel
 ```
 
----
+
 
 ### Remove Remote.it Completely
 ```bash
@@ -199,7 +199,7 @@ sudo rm -rf /usr/share/remoteit
 sudo rm -rf /etc/remoteit
 ```
 
----
+
 
 ### Verify Removal
 ```bash
